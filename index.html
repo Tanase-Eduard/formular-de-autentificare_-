@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina de autentificare</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            
+            @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+              body{
+           
+                font-family: cursive;
+                align-content: center;
+                text-align: center;
+                 background: url("background1.gif");
+                   background-repeat: no-repeat;
+                   
+                   background-size: 1580px 1000px;
+              
+              
+               color: white;
+               font-size: 20px;
+            }
+            
+                .login-box {
+                width: 280px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: black;
+            }
+            
+                .textbox i{
+                width: 26px;
+         
+                text-align: center;
+                
+            }
+            .textbox input{
+       
+                color: gray;
+                font-size: 19px;
+                margin: 0 10px;
+                
+            }
+            
+           .button 
+           {
+               background-color: darkslategrey;
+               border: none;
+               color: white;
+               padding: 15px 20px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+              font-size: 16px;
+              cursor: pointer;
+              height: 45px;
+              width: 250px;
+              border: 1px solid white;
+           }
+           
+           .button2
+           {
+               background-color: darkslateblue;
+               border: none;
+               color: white;
+               padding: 15px 20px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 16px;
+               cursor: pointer;
+               height: 45px;
+               width: 250px;
+               border: 2px solid white;
+           }
+           
+           
+           button:hover
+           {
+               opacity: 0.8;
+           }
+
+           .pozitie_data 
+           {
+               position: absolute;
+               top:0;
+               margin-top: 17px;
+               margin-left: 11px;
+               
+           }
+            
+    
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <!-- Pagina de autentificare -->
+        <br>
+        <br>
+        <h1>Bine ai venit!</h1>
+        <h2>Autentificare</h2>
+        <br>
+        
+        <div class="textbox">
+       
+       <!-- <i class="fa fa-user" aria-hidden="true"></i>  --> 
+        Username:<br><i class="fa fa-user" aria-hidden="true"></i><input type="text" name="Username" placeholder="Username" ><br>
+        </div>
+        
+        <div class="textbox">
+        Parola:<br> <i class="fa fa-lock" aria-hidden="true"></i><input type="text" name="Parola" placeholder="Parola" ><br>
+        </div>
+        <br> <button class="button" type="submit">Autentificare</button>
+        <br>
+        <br>
+        <form action="Recuperare_parola.jsp" method="post">
+            <button class="button2" type="submit">Ai uitat parola?</button>
+        </form>
+        <br>
+         <form action="Cont_nou.jsp" method="post">
+            <button class="button2" type="submit">Nu aveti cont? Fa-ti acum!</button>
+        </form>
+        
+            <p id="data" class="pozitie_data"></p>
+            
+            
+                <script>
+            
+             const d = new Date();
+        const day = d.getDate();
+        const month = d.getMonth()+1;
+        const year= d.getFullYear();
+        
+        newdate = day + "/" + month + "/" + year;
+        //document.getElementById("data").innerHTML = d.getFullYear();
+        //document.getElementById("data").innerHTML = d.getMonth()+1 ;
+        document.getElementById("data").innerHTML =  newdate;
+            
+            
+            
+            
+        </script>
+    </body>
+</html>
